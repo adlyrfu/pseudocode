@@ -6,20 +6,20 @@ function menghitungluaspersegipanjang (panjang, lebar ) {
 console.log(menghitungluaspersegipanjang(20, 10));
 
 //tugas nomer 2
-var x, y, jam, menit, detik,
-    input  = document.getElementById('input'),
-    btn    = document.getElementById('btn'),
-    result = document.getElementById('result');
+let jam = 4;
+let menit = 4;
 
-    btn.addEventListener('click', function(){
-        x     = input.value;
-        y     = x % 3600;
-        jam   = x / 3600;
-        menit = y / 60;
-        detik = y % 60;
-        
-        result.innerHTML = Math.floor(jam) + ' Jam ' + Math.floor(menit) + ' Menit ' + Math.floor(detik) + ' Detik ';
-      });
+function hasiljam(){
+  let detik = jam * 3600 ;
+  return detik
+}
+console.log(hasiljam()+' detik')
+
+function hasilmenit(){
+  let detik = menit * 60;
+  return detik
+}
+console.log(hasilmenit()+' detik')
 
 //tugas nomer 3
 for(var i=1; i<=5;i++){
@@ -38,3 +38,27 @@ let luasLingkaran = Math.PI * (r * r);
 console.log(luasLingkaran);
 
 //tugas nomer 5
+var x = 120;
+var y = 80;
+var z = 140;
+
+if ( x>y & x>z ){
+  console.log("terbesar " + x )
+}else if (y>x & y>z){
+  console.log( "terbesar " + y )
+}else{
+  console.log("terbesar " + z )
+}
+if (x<y & x<z){
+  console.log("terkecil " + x )
+}else if (y<x & y<z){
+  console.log("terkecil " + y )
+}else{
+  console.log("terkecil " + z )
+}
+
+function rata_rata(){
+   var rata_rata = (x+y+z)/3
+   return rata_rata
+}
+console.log("ini rata ratanya "+rata_rata(x, y, z))
